@@ -19,7 +19,7 @@ with open(args.input_path) as f:
 
 if args.percent:
     for k in counts[args.key]:
-        counts[args.key]/= counts['_all'][k]
+        counts[args.key][k]/= counts['_all'][k]
 
 items = sorted(counts[args.key].items(), key=lambda item: (item[1], item[0]), reverse = True)
 top_items = items[:10]

@@ -13,7 +13,7 @@ for file in "$INPUT_DIR"/geoTwitter20-*.zip; do
     
     # Run map.py on each file in parallel using nohup
     echo "Processing $filename..."
-    nohup python3 map.py "$file" "$OUTPUT_DIR" > "$filename" 2>&1 &
+    nohup python3 map.py "$file" "$OUTPUT_DIR" > "logs/$filename.log" 2>&1 &
 
 done
 
