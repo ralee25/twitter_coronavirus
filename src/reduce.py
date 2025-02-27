@@ -19,10 +19,10 @@ def combine(file, output_dir):
                 for key, value in data.items():
                     if key not in combined:
                         combined[key] = {}
-                        for subkey, count in value.items():
-                            if subkey not in combined[key]:
-                                combined[key][subkey]=0
-                                combined[key][subkey]+=count
+                    for subkey, count in value.items():
+                        if subkey not in combined[key]:
+                            combined[key][subkey]=0
+                        combined[key][subkey]+=count
             except json.JSONDecodeError as e:
                 print(f"Error reading {filename}:{e}")
 
@@ -35,7 +35,7 @@ if __name__=="__main__":
         print("usage: python3 reduce.py <output_directory>")
         sys.exit(1)
     output_dir = sys.argv[1]
-combine(os.path.join(output_dir, "*.lang"), os.path.join(output_dir, "all_languages.json"))
-combine(os.path.join(output_dir, "*.country"), os.path.join(output_dir, "all_countries.json"))
+    combine(os.path.join(output_dir, "*.lang"), os.path.join(output_dir, "all_languages.json"))
+    combine(os.path.join(output_dir, "*.country"), os.path.join(output_dir, "all_countries.json"))
 
 
