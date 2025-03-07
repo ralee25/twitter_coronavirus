@@ -11,3 +11,8 @@ This project consists of multiple scripts designed to process Twitter data store
 - Outputs results as JSON files.
 - Combines multiple language and country output files into consolidated files.
 - Generates bar charts using `visualize.py` to visualize the top hashtags by language or country.
+
+
+  ### Images
+ For all countries, I saw this as the top 10 countries who mentioned coronavirus in 2020. 
+ ![Top 10 languages mentioning coronavirus](src/all_languages_coronavirus_top_10_bargraph.png)
